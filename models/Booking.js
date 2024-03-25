@@ -10,7 +10,7 @@ const BookingSchema = new mongoose.Schema({
         required: [true, 'Please add a booking end date']
     },
     roomType: {
-        type: string,
+        type: String,
         required: [true, 'Please select room type']
     },
     user: {
