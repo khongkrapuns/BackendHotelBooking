@@ -68,12 +68,11 @@ exports.addBooking=async (req,res,next) =>{
 
         console.log(`body:\n${JSON.stringify(req.body)}\nbody end`);
         const booking = await Booking.create({
-            bookingฺBegin: new Date(req.body.bookingฺBegin),
-            bookingEnd: new Date(req.body.bookingEnd),
+            bookingฺBegin: req.body.bookingฺBegin,
+            bookingEnd: req.body.bookingEnd,
             roomType: req.body.roomType,
             user: req.body.user,
             hotel: req.body.hotel,
-            createdAt: Date.now()
         });
         res.status (200).json ({
             success:true,
