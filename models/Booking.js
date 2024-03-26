@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const BookingSchema = new mongoose.Schema({
-    bookingฺBegin: {
+    bookingBegin: {
         type: Date,
         required: [true, 'Please add a booking begin date']
     },
