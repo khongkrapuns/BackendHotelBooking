@@ -66,7 +66,7 @@ exports.addBooking=async (req,res,next) =>{
             return res.status(400).json({success:false,message:`The user with ID ${req.user.id} has already made 3 Bookings`});
         }
 
-        console.log(`body:\n${req.body}\nbody end`);
+        console.log(`body:\n${JSON.stringify(req.body)}\nbody end`);
         const booking = await Booking.create({
             bookingฺBegin: new Date(req.body.bookingฺBegin),
             bookingEnd: new Date(req.body.bookingEnd),
