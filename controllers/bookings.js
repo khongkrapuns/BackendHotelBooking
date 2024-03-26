@@ -73,8 +73,8 @@ exports.addBooking=async (req,res,next) =>{
             user: req.body.user,
             hotel: req.body.hotel, 
         })
-        console.log(`body:\n${bking}\nbody end`);
         const booking = await Booking.create(bking);
+        console.log(`body:\n${bking}\nbody end`);
         res.status (200).json ({
             success:true,
             data: booking
